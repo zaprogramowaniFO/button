@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            color: orange;
+            font-family: Tahoma, sans-serif;
+        }
+        
+        button {
+            font-family: Tahoma, sans-serif;
+            background-color: white;
+            border: 1px solid black;
+            width: 200px;
+        }
+        
+        button:hover {
+            background-color: orange;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>WITAJ ŚWIECIE!</h1>
+
+        <button>
+        KLIKNIJ MNIE
+    </button>
+    </section>
+    <script>
+        const header = document.querySelector('h1');
+        const button = document.querySelector('button');
+        const text = header.innerHTML;
+
+
+        function change() {
+            if (header.innerHTML == text)
+                header.innerHTML = "JS JEST THE BEST!";
+
+            else
+                header.innerHTML = text;
+            console.log('hello!');
+        }
+
+
+
+        button.addEventListener('click', change);
+    </script>
+</body>
+
+</html>
